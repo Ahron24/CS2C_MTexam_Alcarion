@@ -1,0 +1,13 @@
+// userProfile.js
+
+// User information variables
+let fullName = "John Doe"; // Replace with actual input if needed
+let age = 25; // Replace with actual input if needed
+let favoriteNumber = 7; // Replace with actual input if needed
+let favoriteColor = "Blue"; // Replace with actual input if needed
+
+// Logging the information to the console
+console.log("Full Name:", fullName);
+console.log("Age:", age);
+console.log("Favorite Number:", favoriteNumber);
+console.log("Favorite Color:", favoriteColor);
