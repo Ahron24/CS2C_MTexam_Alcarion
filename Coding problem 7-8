@@ -1,0 +1,73 @@
+# Initialize subject arrays
+DSA = []
+PL = []
+Networks = []
+
+def enroll_student(subject):
+    name = input("Enter the name of the student to enroll: ")
+    subject.append(name)
+    print(f"{name} has been enrolled in the subject.")
+
+def unenroll_student(subject):
+    if len(subject) == 0:
+        print("No students are currently enrolled in this subject.")
+        return
+    
+    print("Currently enrolled students:")
+    for idx, student in enumerate(subject, 1):
+        print(f"{idx}. {student}")
+    
+    name = input("Enter the name of the student to unenroll: ")
+    if name in subject:
+        subject.remove(name)
+        print(f"{name} has been unenrolled from the subject.")
+    else:
+        print(f"{name} is not enrolled in this subject.")
+
+def main():
+    while True:
+        print("\nSelect a subject:")
+        print("(A) DSA")
+        print("(B) PL")
+        print("(C) Networks")
+        subject_choice = input("Enter your choice: ").upper()
+
+        if subject_choice == "A":
+            subject = DSA
+            subject_name = "DSA"
+        elif subject_choice == "B":
+            subject = PL
+            subject_name = "PL"
+        elif subject_choice == "C":
+            subject = Networks
+            subject_name = "Networks"
+        else:
+            print("Invalid choice. Please select again.")
+            continue
+
+        while True:
+            print(f"\nSubject: {subject_name}")
+            print("(A) Enroll")
+            print("(B) Unenroll")
+            print("(C) Select Another Subject")
+            print("(D) Exit")
+            operation_choice = input("Enter your choice: ").upper()
+
+            if operation_choice == "A":
+                enroll_student(subject)
+            elif operation_choice == "B":
+                unenroll_student(subject)
+            elif operation_choice == "C":
+                break  # Go back to subject selection
+            elif operation_choice == "D":
+                print("\nFinal Enrollment List:")
+                print(f"DSA: {DSA}")
+                print(f"PL: {PL}")
+                print(f"Networks: {Networks}")
+                print("Exiting the program.")
+                return
+            else:
+                print("Invalid choice. Please select again.")
+
+# Run the main function
+main()
