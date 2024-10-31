@@ -1,0 +1,22 @@
+// Prompt the user for their information
+let fullName = prompt("Enter your full name:");
+let age = parseInt(prompt("Enter your age:"));
+let favoriteNumber = parseInt(prompt("Enter your favorite number:"));
+
+// Create an array to store favorite colors
+let favoriteColors = [];
+for (let i = 0; i < 3; i++) {
+    let color = prompt("Enter one of your favorite colors:");
+    favoriteColors.push(color);
+}
+
+// Create the userProfile object
+let userProfile = {
+    fullName: fullName,
+    age: age,
+    favoriteNumber: favoriteNumber,
+    favoriteColors: favoriteColors
+};
+
+// Log the entire object to the console
+console.log(userProfile);
