@@ -1,0 +1,18 @@
+// Create an array to store three colors
+let colorPreferences = [];
+
+// Use a loop to get three color inputs from the user
+for (let i = 0; i < 3; i++) {
+    let color = prompt("Enter a color you like:");
+    colorPreferences.push(color); // Add the new color to the array
+    console.log(colorPreferences); // Print the updated array to the console
+}
+
+// Optionally, you can ask for more colors and continue updating the array
+let addMore = prompt("Would you like to add another color? (yes/no)");
+while (addMore.toLowerCase() === "yes") {
+    let newColor = prompt("Enter another color:");
+    colorPreferences.push(newColor);
+    console.log(colorPreferences); // Print the updated array to the console
+    addMore = prompt("Would you like to add another color? (yes/no)");
+}
