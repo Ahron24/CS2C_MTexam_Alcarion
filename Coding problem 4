@@ -1,0 +1,18 @@
+// Declare a variable to hold the favorite number
+const theFavNumber = 7; // You can change this to any favorite number you want
+
+let guess;
+while (true) {
+    // Prompt the user to guess the favorite number
+    guess = parseInt(prompt("Guess the favorite number:"));
+
+    // Check if the guess is correct, too high, or too low
+    if (guess === theFavNumber) {
+        console.log("Correct! You've guessed the favorite number.");
+        break;
+    } else if (guess > theFavNumber) {
+        console.log("Too high. Try again.");
+    } else {
+        console.log("Too low. Try again.");
+    }
+}
